@@ -1,0 +1,172 @@
+/*-----PODESAVANJA-----*/
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F7F5F1;
+}
+#site-wrapper{
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    box-shadow: -2px 5px 20px #888888;
+    filter: grayscale(75%);
+    z-index: -1;
+}
+
+/*-----NAVIGACIJA-----*/
+
+.navigacija{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:2;
+}
+
+.nav-item{
+    color:white;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.nav-item:hover{
+    background-color: blanchedalmond;
+    color:black;
+}
+
+/*-----BANER-----*/
+
+#banner{
+    clear: both;
+    width: 100%;    
+}
+
+#banner-img{
+    height: 500px;;
+}
+
+/*-----MAIN-----*/
+
+main{
+    width: 55%;
+    margin: auto;
+    margin-top:20px;
+}
+
+.naslov{
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding: 5px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 50px;
+    margin: auto;
+    width: 250px;
+    margin-top:25px;
+    margin-bottom: 35px;
+}
+
+#about p{
+    text-align: justify;
+}
+
+.about-podaci{
+    text-align: left;
+    display: inline-block;
+}
+
+/*-----MENU-----*/
+
+
+
+.menu-double{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    background-color: #F7F5F1;
+    padding: 5px;
+    
+    border-bottom: 0;
+    box-shadow: -2px 5px 20px #888888;
+}
+
+.menu-double-item{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#ispis h1{
+    font-weight: 100;
+}
+
+#ispis{
+    margin-bottom: 35px;
+    margin-top:3px;
+    box-shadow: -2px 5px 20px #888888;
+    padding-left: 10px;
+}
+
+#ispis p{
+    margin-bottom: 40px;
+}
+
+/*-----FIND US-----*/
+input{
+    width: 100%;
+    height: 35px;
+    margin-top:10px;
+    padding: 10px;
+    border: 1px solid silver;
+}
+
+#dugme{
+    background-color: black;
+    border: none;
+    color:white;
+    width: 150px;
+}
+
+
+/*-----FOOTER-----*/
+
+footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 30px;
+    margin-top:15px;
+}
+
+
+/*-----MEDIA-----*/
+
+@media (max-width:768px){
+    main{
+        width: 95%;
+    }
+}

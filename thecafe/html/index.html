@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/stilcoffee.css">
+    <title>Document</title>
+</head>
+
+<body onload="myFunction()">
+    <div id="site-wrapper">
+        <div class=navigacija>
+            <a href="#site-wrapper" class="nav-item">HOME</a>
+            <a href="#about" class="nav-item">ABOUT</a>
+            <a href="#menu" class="nav-item">MENU</a>
+            <a href="#findUS" class="nav-item">WHERE</a>
+        </div>
+
+        <div id="banner">
+            <img src="../img/img_mouseover3.jpg" alt="">
+        </div>
+
+        <main>
+
+            <section id="about">
+                <span class="naslov">ABOUT THE CAFE</span>
+                <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                    In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and
+                    lunch sandwiches, as well as a selection of sides and salads and other good stuff.
+                </p>
+                <img src="../img/coffeeshop.jpg" alt="">
+                <h3 class="about-podaci">Opening hours:</h3> <span class="about-podaci-span">everyday from 6am to 5pm.</span>
+                <br>
+                <h3 class="about-podaci">Address: </h3> <span class="about-podaci">15 Adr street, 5015, NY</span>
+            </section>
+
+            <section id="menu">
+                <span class="naslov">MENU</span>
+                <div class="menu-double">
+                    <div class="menu-double-item" onclick="promeniMenu('eat')" id="eatID">
+                        <h3>Eat</h3>
+                    </div>
+                    <div class="menu-double-item" onclick="promeniMenu('drink')" id="drinkID">
+                        <h3>Drink</h3>
+                    </div>
+                </div>
+                <div id="ispis"></div>
+                <img src="../img/coffeehouse2.jpg" alt="">
+            </section>
+
+            <section id="findUS">
+                <span class="naslov">WHERE TO FIND US</span>
+                <h1>Find us at some address at some place.</h1>
+                <img src="../img/map.jpg" alt="">
+                <p>We offer full-service catering for any event, large or small. We understand your needs and we will
+                    cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+                <p>Reserve a table, ask for today's special or just send us a message:</p>
+                <form action="">
+                    <input type="text" placeholder="Name"><br>
+                    <input type="number" name="" id="" value="0"><br>
+                    <input type="date"><br>
+                    <input type="text" placeholder="Message"><br>
+                    <input type="button" value="SEND MESSAGE" id="dugme">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Design by Danilo
+        </footer>
+    </div>
+    <script>
+        let divIspis = document.querySelector("#ispis");
+
+        function promeniMenu(element) {
+            //let brojac = 1;
+            if (element == 'eat') {
+                document.getElementById("eatID").style.backgroundColor = '#616161';
+                document.getElementById("eatID").style.color = "white";
+                document.getElementById("drinkID").style.backgroundColor = 'inherit';
+                document.getElementById("drinkID").style.color = 'black';
+                html =
+                    "<h1>Bread Basket</h1>" +
+                    "<p>Assortment of fresh baked fruit breads and muffins 5.50</p>" +
+                    "<h1>Honey Almond Granola with Fruits</h1>" +
+                    "<p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>" +
+                    "<h1>Belgian Waffle</h1>" +
+                    "<p>Vanilla flavored batter with malted flour 7.50</p>" +
+                    "<h1>Scrambled eggs</h1>" +
+                    "<p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>" +
+                    "<h1>Blueberry Pancakes</h1>" +
+                    "<p>Blueberry Pancakes</p>";
+                divIspis.innerHTML = html;
+                //brojac++;
+            } else {
+                document.getElementById("eatID").style.backgroundColor = 'inherit';
+                document.getElementById("eatID").style.color = "black";
+                document.getElementById("drinkID").style.backgroundColor = '#616161';
+                document.getElementById("drinkID").style.color = 'white';
+                html =
+                    "<h1>Coffee</h1>" +
+                    "<p>Regular coffee 2.50</p>" +
+                    "<h1>Chocolato</h1>" +
+                    "<p>Chocolate espresso with milk 4.50</p>" +
+                    "<h1>Corretto</h1>" +
+                    "<p>Whiskey and coffee 5.00</p>" +
+                    "<h1>Iced tea</h1>" +
+                    "<p>Hot tea, except not hot 3.00</p>" +
+                    "<h1>Soda</h1>" +
+                    "<p>Coke, Sprite, Fanta, etc. 2.50s</p>";
+                divIspis.innerHTML = html;
+            }
+        }
+
+        function myFunction() {
+            document.getElementById("eatID").style.backgroundColor = '#616161';
+            document.getElementById("eatID").style.color = "white";
+            document.getElementById("drinkID").style.backgroundColor = 'inherit';
+            html =
+                "<h1>Bread Basket</h1>" +
+                "<p>Assortment of fresh baked fruit breads and muffins 5.50</p>" +
+                "<h1>Honey Almond Granola with Fruits</h1>" +
+                "<p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>" +
+                "<h1>Belgian Waffle</h1>" +
+                "<p>Vanilla flavored batter with malted flour 7.50</p>" +
+                "<h1>Scrambled eggs</h1>" +
+                "<p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>" +
+                "<h1>Blueberry Pancakes</h1>" +
+                "<p>Blueberry Pancakes</p>";
+            divIspis.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
